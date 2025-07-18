@@ -1,9 +1,11 @@
-import { pageLinks, scocialLinks } from "../data";
+import { scocialLinks } from "../data";
+import PageLinks from "./PageLinks";
 
 const Footer = () => {
   return (
     <footer className="section footer">
-      <ul className="footer-links">
+      <PageLinks parentClass="footer-links" itemClass="footer-link" />
+      {/* <ul className="footer-links">
         {pageLinks.map((link) => {
           const { id, href, text } = link;
 
@@ -15,7 +17,7 @@ const Footer = () => {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
       <ul className="footer-icons">
         {scocialLinks.map((link) => {
           const { id, href, icon } = link;
