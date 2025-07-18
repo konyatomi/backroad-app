@@ -1,5 +1,6 @@
-import { scocialLinks } from "../data";
+import { socialLinks } from "../data";
 import PageLinks from "./PageLinks";
+import SocialLink from "./SocialLink";
 
 const Footer = () => {
   return (
@@ -19,16 +20,9 @@ const Footer = () => {
         })}
       </ul> */}
       <ul className="footer-icons">
-        {scocialLinks.map((link) => {
+        {socialLinks.map((link) => {
           const { id, href, icon } = link;
-
-          return (
-            <li key={id}>
-              <a href={href} target="_blank" className="footer-icon">
-                <i className={icon}></i>
-              </a>
-            </li>
-          );
+          return <SocialLink key={link.id} {...link} itemClass="footer-icon" />;
         })}
       </ul>
       <p className="copyright">
