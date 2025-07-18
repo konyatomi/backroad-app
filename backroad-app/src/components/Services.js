@@ -8,7 +8,7 @@ const Services = () => {
       <Title title="our" subtitle="services" />
       <div className="section-center services-center">
         {services.map((service) => {
-          return <Service key={services.id} {...Service} />;
+          return <Service key={services.id} {...service} />;
         })}
       </div>
     </section>
